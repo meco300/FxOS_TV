@@ -12,7 +12,13 @@
   "permissions": {
     "pana-plugin":{},
     "pana-server-url":{},
-    "tv":{}
+    "tv":{},
+    "systemXHR": {
+      "description": "xhr! xhr!"
+    },
+    "tcp-socket" : {
+      "description" : "Create TCP sockets and communicate over them."
+    }
   },
   "default_locale": "ja-JP",
   "locales": {
