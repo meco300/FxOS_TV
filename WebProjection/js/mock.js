@@ -131,7 +131,7 @@ var mock = (function () {
                     document.getElementById("aimgfile").style.display="none"
                     document.getElementById("atv").style.visibility = 'visible';
                     document.getElementById("atv").style.display=""
-                                        video = document.getElementById('atv');
+                    video = document.getElementById('atv');
                       
                         if (!tv) {
                             console ('failed to get tv. check permission.');
@@ -155,12 +155,105 @@ var mock = (function () {
                     
                case 72: /* H */
                     //AにYoutubeがつく
-                    
+                    document.getElementById("atv").style.display="none"
+                    document.getElementById("atv").style.visibility = 'hidden';
+                    document.getElementById("aimgfile").style.display="none"
+                    document.getElementById("aimgfile").style.visibility = 'hidden';                    
+                    document.getElementById("ayoutube").style.visibility = 'visible';
+                    document.getElementById("ayoutube").style.display=""               
                 break;                     
+               case 73: /* I */
+                    //Aにビデオがつく
+                    document.getElementById("ayoutube").style.display="none"
+                    document.getElementById("ayoutube").style.visibility = 'hidden';
+                    document.getElementById("aimgfile").style.display="none"
+                    document.getElementById("aimgfile").style.visibility = 'hidden';                    
+                    document.getElementById("atv").style.visibility = 'visible';
+                    document.getElementById("atv").style.display=""               
+                        video = document.getElementById('atv');
+                      
+                        if (!tv) {
+                            console ('failed to get tv. check permission.');
+                            return;
+                        }
+                        tv.getTuners().then (function onsuccess(tuners) {
+                            if (tuners.length == 0) {
+                                console ('getTuners() fail.');
+                                return;
+                            }
+                            tuners[0].setCurrentSource ('isdb-t').then(function onsuccess() {
+                                video.mozSrcObject = tuners[0].stream;  // for STB 
+                            }, function onerror(error) {
+                                console ('setCurrentSource() error');
+                            });
+                        }, function onerror(error) {
+                            console ('getTuners() error.');
+                       });   
+
+
+                break;  
+
+               case 74: /* J */
+                    //Aに絵がつく
+                    document.getElementById("atv").style.display="none"
+                    document.getElementById("atv").style.visibility = 'hidden';
+                    document.getElementById("ayoutube").style.display="none"
+                    document.getElementById("ayoutube").style.visibility = 'hidden';                    
+                    document.getElementById("aimgfile").style.visibility = 'visible';
+                    document.getElementById("aimgfile").style.display=""               
+                break;  
                     
                     
                     
-                    
+                case 75: /* K */
+                    //BにYoutubeがつく
+                    document.getElementById("btv").style.display="none"
+                    document.getElementById("btv").style.visibility = 'hidden';
+                    document.getElementById("bimgfile").style.display="none"
+                    document.getElementById("bimgfile").style.visibility = 'hidden';                    
+                    document.getElementById("byoutube").style.visibility = 'visible';
+                    document.getElementById("byoutube").style.display=""               
+                break;                     
+               case 76: /* L */
+                    //Bにビデオがつく
+                    document.getElementById("byoutube").style.display="none"
+                    document.getElementById("byoutube").style.visibility = 'hidden';
+                    document.getElementById("bimgfile").style.display="none"
+                    document.getElementById("bimgfile").style.visibility = 'hidden';                    
+                    document.getElementById("btv").style.visibility = 'visible';
+                    document.getElementById("btv").style.display=""               
+                        video = document.getElementById('btv');
+                      
+                        if (!tv) {
+                            console ('failed to get tv. check permission.');
+                            return;
+                        }
+                        tv.getTuners().then (function onsuccess(tuners) {
+                            if (tuners.length == 0) {
+                                console ('getTuners() fail.');
+                                return;
+                            }
+                            tuners[0].setCurrentSource ('isdb-t').then(function onsuccess() {
+                                video.mozSrcObject = tuners[0].stream;  // for STB 
+                            }, function onerror(error) {
+                                console ('setCurrentSource() error');
+                            });
+                        }, function onerror(error) {
+                            console ('getTuners() error.');
+                       });   
+
+
+                break;  
+
+               case 77: /* M */
+                    //Bに絵がつく
+                    document.getElementById("btv").style.display="none"
+                    document.getElementById("btv").style.visibility = 'hidden';
+                    document.getElementById("byoutube").style.display="none"
+                    document.getElementById("byoutube").style.visibility = 'hidden';                    
+                    document.getElementById("bimgfile").style.visibility = 'visible';
+                    document.getElementById("bimgfile").style.display=""               
+                break;                     
                     
                     
                     
