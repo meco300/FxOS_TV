@@ -3,6 +3,7 @@ body, html {
   height:100%;
   margin: 0;
   padding:0;
+  background:"#EAEFF2";
 }
 
 .tv-frame {
@@ -36,8 +37,8 @@ body, html {
 .adiv-frame {
   margin: 0px;
   padding: 0px;
-  height: 190px;
-  width: 250px;
+  height: 500px;
+  width: 900px;
   border: 10px solid black;
   float: left;
 
@@ -45,8 +46,8 @@ body, html {
 .bdiv-frame {
   margin: 0px;
   padding: 0px;
-  height: 190px;
-  width: 250px;
+  height: 500px;
+  width: 900px;
   border: 10px solid black;
   float: left;
 

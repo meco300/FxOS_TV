@@ -1,5 +1,6 @@
 (function() {
   var chat = $.connection.chatHub;
+  var calibration = 'adiv';
 
   function init() {
 
@@ -9,6 +10,17 @@
         //if(name === 'CHANNEL'){
         //  setChannel(message);
         //}
+      
+      if (name === 'A'){
+        calibration = 'adiv';
+      }
+      if (name === 'B'){
+        calibration = 'bdiv';
+      }
+      if (name === 'MOVE'){
+        $('#'+calibration).css('transform', message);
+        $('#'+calibration).css('transform-origin', '0 0');
+      }
     };
           
       // Start the connection.
@@ -22,6 +34,7 @@
           $('#message').val('').focus();
         });
       });
-  } 
+  }
+    
   window.addEventListener('DOMContentLoaded', init, false);
 })();
