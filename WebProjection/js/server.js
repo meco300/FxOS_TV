@@ -14,6 +14,30 @@
 
       }
       if (name === 'b_info'){
+        if (name === 'cloudy'){
+                   //bに絵
+                    document.getElementById("cdiv").style.display="none"      
+                    document.getElementById("adiv").style.display="" 
+                    document.getElementById("bdiv").style.display=""  
+                    document.getElementById("btv").style.display="none"
+                    document.getElementById("btv").style.visibility = 'hidden';
+                    document.getElementById("byoutube").style.display="none"
+                    document.getElementById("byoutube").style.visibility = 'hidden';
+                    document.getElementById("tenki_cloudy").style.visibility = 'visible';
+                    document.getElementById("tenki_cloudy").style.display=""
+
+
+        }
+        if (name === 'rain'){
+
+
+
+        }
+        if (name === 'sunny'){
+
+
+
+        }                
       }  
       if (name === 'a_movie'){
                     document.getElementById("cdiv").style.display="none"      
