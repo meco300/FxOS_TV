@@ -22,9 +22,7 @@
                     document.getElementById("atv").style.display="none"
                     document.getElementById("atv").style.visibility = 'hidden';
                     document.getElementById("aimgfile").style.display="none"
-                    document.getElementById("aimgfile").style.visibility = 'hidden';                    
-                    document.getElementById("ayoutube").style.visibility = 'visible';
-                    document.getElementById("ayoutube").style.display=""    
+                    document.getElementById("aimgfile").style.visibility = 'hidden';  
       }      
       if (name === 'b_movie'){
                     document.getElementById("cdiv").style.display="none"      
@@ -33,9 +31,7 @@
                     document.getElementById("btv").style.display="none"
                     document.getElementById("btv").style.visibility = 'hidden';
                     document.getElementById("bimgfile").style.display="none"
-                    document.getElementById("bimgfile").style.visibility = 'hidden';                    
-                    document.getElementById("byoutube").style.visibility = 'visible';
-                    document.getElementById("byoutube").style.display=""  
+                    document.getElementById("bimgfile").style.visibility = 'hidden';
 
       }         
       if (name === 'a_picture'){
@@ -45,8 +41,6 @@
                     document.getElementById("bdiv").style.display=""  
                     document.getElementById("atv").style.display="none"
                     document.getElementById("atv").style.visibility = 'hidden';
-                    document.getElementById("ayoutube").style.display="none"
-                    document.getElementById("ayoutube").style.visibility = 'hidden';
                     document.getElementById("aimgfile").style.visibility = 'visible';
                     document.getElementById("aimgfile").style.display=""
 
@@ -58,8 +52,6 @@
                     document.getElementById("bdiv").style.display=""  
                     document.getElementById("btv").style.display="none"
                     document.getElementById("btv").style.visibility = 'hidden';
-                    document.getElementById("byoutube").style.display="none"
-                    document.getElementById("byoutube").style.visibility = 'hidden';
                     document.getElementById("bimgfile").style.visibility = 'visible';
                     document.getElementById("bimgfile").style.display=""
 
@@ -100,13 +92,15 @@
                   document.getElementById("adiv").style.display="none"
                   document.getElementById("bdiv").style.display="none"                                       
                   document.getElementById("cyoutube").style.visibility = 'visible';
-                  document.getElementById("cyoutube").style.display=""                 
+                  document.getElementById("cyoutube").style.display=""
+                  document.getElementById("ctv").style.visibility = 'hidden';
+                  document.getElementById("ctv").style.display="none";                                      
                   document.getElementById("cdiv").style.display=""  
 
       }   
 
       if (name === 'A'){
-        calibration = 'bdiv';
+        calibration = 'adiv';
       }
 
       if (name === 'B'){
