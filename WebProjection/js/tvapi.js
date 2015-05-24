@@ -85,19 +85,6 @@ var stb = (function () {
                    }, function onerror(error) {
                       errlog ('error setCurrentChannel : ' + ch.name + '.');
                    });
-                
-                
-                  var currentChannel = channelList[0];
-
-                  TvTuning(currentChannel);
-                    
-                  currentChannel.getCurrentProgram().then(function onsuccess(program) {
-                       createChannelProgramBanner(currentChannel, program);
-                  }, function onerror(error) {
-                       errlog ('getCurrentProgram() error');
-                  });
-                
-                
             }else{
                console.log('index overflow');
             }
@@ -110,7 +97,23 @@ var stb = (function () {
             document.getElementById('btv').mozSrcObject = undefined;
             
             video = document.getElementById(VideoId);
-            video.mozSrcObject = stb.stream;  // for STB 
+            
+            var tv = window.navigator.tv;  
+            if (!tv) {
+                console.log('テレビAPIが見つかりません。パーミッションを確認してください');
+                return;
+            }
+            console.log('InitOk');
+            
+            tv.getTuners().then (
+                function onsuccess(tuners) {
+                    if (tuners.length == 0) {
+                        console.log ('getTuners() fail.');
+                        return;
+                    }
+                    video.mozSrcObject = tuners[0].stream;  // for STB
+                }
+            );
         };
         
         this.send = function(program){
