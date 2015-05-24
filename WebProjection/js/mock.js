@@ -6,7 +6,16 @@ var mock = (function () {
             // キーイベントを受け取る
             var key = event.keyCode;
             console.log("Key:"+key);
-            
+
+
+
+//tv設定
+                  var tv = window.navigator.tv;
+
+
+
+
+
             switch(key) {
 
                 case 65: /* A */
@@ -20,16 +29,71 @@ var mock = (function () {
 
                     break;
                 case 66: /* B */
-                    // TODO initテスト
+                  //Aにテレビ表示
+                  //document.getElementById("bdiv").style.display="none"
+                  document.getElementById("cdiv").style.display="none"      
+                  document.getElementById("adiv").style.display="" 
+                  document.getElementById("bdiv").style.display=""                                              
+                document.getElementById("ayoutube").style.display="none"
+                document.getElementById("ayoutube").style.visibility = 'hidden';
+                document.getElementById("aimgfile").style.display="none"
+                document.getElementById("aimgfile").style.visibility = 'hidden';                    
+                document.getElementById("atv").style.visibility = 'visible';
+                document.getElementById("atv").style.display=""               
+     
+                  video = document.getElementById('atv');
+                    
+                      if (!tv) {
+                          console ('failed to get tv. check permission.');
+                          return;
+                      }
+                      tv.getTuners().then (function onsuccess(tuners) {
+                          if (tuners.length == 0) {
+                              console ('getTuners() fail.');
+                              return;
+                          }
+                          tuners[0].setCurrentSource ('isdb-t').then(function onsuccess() {
+                              video.mozSrcObject = tuners[0].stream;  // for STB 
+                          }, function onerror(error) {
+                              console ('setCurrentSource() error');
+                          });
+                      }, function onerror(error) {
+                          console ('getTuners() error.');
+                     });                    
+                    
                     
                     break;                    
                case 67: /* C */
-                    //aのビデオをつける
-                    stb.display('atv');
+                          //aにようつべ
+
+                    document.getElementById("cdiv").style.display="none"      
+                    document.getElementById("adiv").style.display="" 
+                    document.getElementById("bdiv").style.display=""                       
+                    document.getElementById("atv").style.display="none"
+                    document.getElementById("atv").style.visibility = 'hidden';
+                    document.getElementById("aimgfile").style.display="none"
+                    document.getElementById("aimgfile").style.visibility = 'hidden';                    
+                    document.getElementById("ayoutube").style.visibility = 'visible';
+                    document.getElementById("ayoutube").style.display=""    
+
+
+
+
+
+
                break;
                case 68: /* D */
-                    //bのビデオをつける
-                    stb.display('btv');
+                          //bにようつべ
+
+                    document.getElementById("cdiv").style.display="none"      
+                    document.getElementById("adiv").style.display="" 
+                    document.getElementById("bdiv").style.display=""                       
+                    document.getElementById("btv").style.display="none"
+                    document.getElementById("btv").style.visibility = 'hidden';
+                    document.getElementById("bimgfile").style.display="none"
+                    document.getElementById("bimgfile").style.visibility = 'hidden';                    
+                    document.getElementById("byoutube").style.visibility = 'visible';
+                    document.getElementById("byoutube").style.display=""    
                 break; 
 
                case 69: /* E */
@@ -41,33 +105,7 @@ var mock = (function () {
 
 
                case 71: /* G */
-                   //Aのイメージを消してビデオをつける
-                    document.getElementById("aimgfile").style.display="none"
-                    document.getElementById("atv").style.visibility = 'visible';
-                    document.getElementById("atv").style.display=""
-                    stb.display('atv');
-                break; 
-                    
-                    
-               case 72: /* H */
-                    //AにYoutubeがつく
-                    document.getElementById("atv").style.display="none"
-                    document.getElementById("atv").style.visibility = 'hidden';
-                    document.getElementById("aimgfile").style.display="none"
-                    document.getElementById("aimgfile").style.visibility = 'hidden';                    
-                    document.getElementById("ayoutube").style.visibility = 'visible';
-                    document.getElementById("ayoutube").style.display=""               
-                break;                     
-               case 73: /* I */
-                    //Aにビデオがつく
-                    document.getElementById("ayoutube").style.display="none"
-                    document.getElementById("ayoutube").style.visibility = 'hidden';
-                    document.getElementById("aimgfile").style.display="none"
-                    document.getElementById("aimgfile").style.visibility = 'hidden';                    
-                    document.getElementById("atv").style.visibility = 'visible';
-                    document.getElementById("atv").style.display=""
-                    stb.display('atv');
-                    break;  
+                break;  
 
                case 74: /* J */            
                 break;  
@@ -77,14 +115,7 @@ var mock = (function () {
                 case 75: /* K */
                 break;                     
                case 76: /* L */
-                    //Bにビデオがつく
-                    document.getElementById("byoutube").style.display="none"
-                    document.getElementById("byoutube").style.visibility = 'hidden';
-                    document.getElementById("bimgfile").style.display="none"
-                    document.getElementById("bimgfile").style.visibility = 'hidden';                    
-                    document.getElementById("btv").style.visibility = 'visible';
-                    document.getElementById("btv").style.display=""               
-                    stb.display('btv');
+
                 break;  
 
                case 77: /* M */    

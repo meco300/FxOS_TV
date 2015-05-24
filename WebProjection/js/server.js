@@ -11,29 +11,68 @@
         //  setChannel(message);
         //}
       if (name === 'a_info'){
+
       }      
       if (name === 'b_info'){
       }  
       if (name === 'a_movie'){
-
+                    document.getElementById("cdiv").style.display="none"      
+                    document.getElementById("adiv").style.display="" 
+                    document.getElementById("bdiv").style.display=""                       
+                    document.getElementById("atv").style.display="none"
+                    document.getElementById("atv").style.visibility = 'hidden';
+                    document.getElementById("aimgfile").style.display="none"
+                    document.getElementById("aimgfile").style.visibility = 'hidden';                    
+                    document.getElementById("ayoutube").style.visibility = 'visible';
+                    document.getElementById("ayoutube").style.display=""    
 
 
 
       }      
       if (name === 'b_movie'){
-
+                    document.getElementById("cdiv").style.display="none"      
+                    document.getElementById("adiv").style.display="" 
+                    document.getElementById("bdiv").style.display=""                       
+                    document.getElementById("btv").style.display="none"
+                    document.getElementById("btv").style.visibility = 'hidden';
+                    document.getElementById("bimgfile").style.display="none"
+                    document.getElementById("bimgfile").style.visibility = 'hidden';                    
+                    document.getElementById("byoutube").style.visibility = 'visible';
+                    document.getElementById("byoutube").style.display=""  
 
       }         
       if (name === 'a_picture'){
+                    //aに絵
+                    document.getElementById("cdiv").style.display="none"      
+                    document.getElementById("adiv").style.display="" 
+                    document.getElementById("bdiv").style.display=""  
+                    document.getElementById("atv").style.display="none"
+                    document.getElementById("atv").style.visibility = 'hidden';
+                    document.getElementById("ayoutube").style.display="none"
+                    document.getElementById("ayoutube").style.visibility = 'hidden';
+                    document.getElementById("aimgfile").style.visibility = 'visible';
+                    document.getElementById("aimgfile").style.display=""
+
       }      
       if (name === 'b_picture'){
+                    //bに絵
+                    document.getElementById("cdiv").style.display="none"      
+                    document.getElementById("adiv").style.display="" 
+                    document.getElementById("bdiv").style.display=""  
+                    document.getElementById("btv").style.display="none"
+                    document.getElementById("btv").style.visibility = 'hidden';
+                    document.getElementById("byoutube").style.display="none"
+                    document.getElementById("byoutube").style.visibility = 'hidden';
+                    document.getElementById("bimgfile").style.visibility = 'visible';
+                    document.getElementById("bimgfile").style.display=""
+
       }      
       if (name === '1'){
   
 
 
 
-             
+
       }        
       if (name === '2'){
       }        
@@ -46,6 +85,11 @@
       if (name === '6'){
       }        
       if (name === 'turnoff'){
+                  document.getElementById("adiv").style.display="none"
+                  document.getElementById("bdiv").style.display="none"                                       
+                  document.getElementById("cyoutube").style.visibility = 'visible';
+                  document.getElementById("cyoutube").style.display=""                 
+                  document.getElementById("cdiv").style.display=""  
 
       }   
 
