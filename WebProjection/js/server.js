@@ -12,7 +12,7 @@
         //}
       if (name === 'a_info'){
 
-      }      
+      }
       if (name === 'b_info'){
       }  
       if (name === 'a_movie'){
@@ -25,9 +25,6 @@
                     document.getElementById("aimgfile").style.visibility = 'hidden';                    
                     document.getElementById("ayoutube").style.visibility = 'visible';
                     document.getElementById("ayoutube").style.display=""    
-
-
-
       }      
       if (name === 'b_movie'){
                     document.getElementById("cdiv").style.display="none"      
@@ -66,24 +63,39 @@
                     document.getElementById("bimgfile").style.visibility = 'visible';
                     document.getElementById("bimgfile").style.display=""
 
-      }      
-      if (name === '1'){
-  
+      }
+      
+      if (name === '1'){ stb.setChannel(1) };
+      if (name === '2'){ stb.setChannel(2) };
+      if (name === '3'){ stb.setChannel(3) };
+      if (name === '4'){ stb.setChannel(4) };
+      if (name === '5'){ stb.setChannel(5) };
+      if (name === '6'){ stb.setChannel(6) };
+      
+      if (name === '1' || name === '2' || name === '3' || name === '4' || name === '5' || name === '6' ){
+        
+        stb.display('ctv');
+        document.getElementById("adiv").style.display="none"
+        document.getElementById("bdiv").style.display="none"                                       
+        document.getElementById("ctv").style.visibility = 'visible';
+        document.getElementById("ctv").style.display="";                                      
+        document.getElementById("cyoutube").style.visibility = 'hidden';
+        document.getElementById("cyoutube").style.display="none";   
+        document.getElementById("cdiv").style.display=""  
 
-
-
-
-      }        
-      if (name === '2'){
-      }        
-      if (name === '3'){
+        /*
+          stb.display('atv');
+          document.getElementById("cdiv").style.display="none"      
+          document.getElementById("adiv").style.display="" 
+          document.getElementById("bdiv").style.display=""   
+          document.getElementById("atv").style.visibility = 'visible';                    
+          document.getElementById("atv").style.display=''
+          document.getElementById("aimgfile").style.visibility = 'hidden';
+          document.getElementById("aimgfile").style.display="none"                    
+          document.getElementById("ayoutube").style.visibility = 'hidden';
+          document.getElementById("ayoutube").style.display="none"
+          */
       }       
-      if (name === '4'){
-      }                    
-      if (name === '5'){
-      }        
-      if (name === '6'){
-      }        
       if (name === 'turnoff'){
                   document.getElementById("adiv").style.display="none"
                   document.getElementById("bdiv").style.display="none"                                       
@@ -104,12 +116,6 @@
         $('#'+calibration).css('transform', message);
         $('#'+calibration).css('transform-origin', '0 0');
       }
-      if (name === '1'){ stb.setChannel(1) };
-      if (name === '2'){ stb.setChannel(2) };
-      if (name === '3'){ stb.setChannel(3) };
-      if (name === '4'){ stb.setChannel(4) };
-      if (name === '5'){ stb.setChannel(5) };
-      if (name === '6'){ stb.setChannel(6) };
     };
           
       // Start the connection.
