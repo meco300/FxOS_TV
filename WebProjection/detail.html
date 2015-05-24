@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+        <link href="css/material-wfont.min.css" rel="stylesheet">
+
+        <script src="js/jquery-1.11.2.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/ripples.min.js"></script>
+        <script src="js/material.min.js"></script>
+        <script src="js/ccchart.js"></script>
+        <script src="js/hamu.js" defer></script>
+        <script src="js/detail.js" defer></script>
+        <style>
+            h1{
+                font-size: 20px;
+            }
+            article{
+                border-radius: 10px;
+                padding: 10px;
+                background-color: white;
+                margin-bottom: 10px;
+            }
+
+            .ham_status_image{
+                width: 100%;
+            }
+            #activity{
+                width: 100%;
+            }
+            .info_wrapper{
+                width: 100%;
+                clear: both;
+            }
+            .panel_left{
+                width: 48%;
+                float: left;
+            }
+            .panel_right{
+                width: 48%;
+                float: right;
+            }
+            .temperatureWrapper{
+                padding-top: 5px;
+                padding-bottom: 3px;
+            }
+            #temperature{
+                font-size: 30px;
+            }
+            .food_wrapper{
+                font-size: 17px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="navbar navbar-warning">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">ハムの状態</a>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">活動状況</h3>
+            </div>
+            <div class="panel-body">
+                <canvas id="activity"></canvas>
+            </div>
+        </div>
+        <div class="info_wrapper">
+            <div class="panel panel-warning panel_left">
+                <div class="panel-heading">
+                    <h3 class="panel-title">お部屋の温度</h3>
+                </div>
+                <div class="panel-body">
+                    <p class="recommend_info temperatureWrapper">
+                        <span id="temperature">計測中</span>度
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-warning panel_right">
+                <div class="panel-heading">
+                    <h3 class="panel-title">ゴハンとお水</h3>
+                </div>
+                <div class="panel-body">
+                    <p class="recommend_info food_wrapper">
+                        ゴハン：<span id="water">計測中</span><br />
+                        お水：<span id="food">計測中</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

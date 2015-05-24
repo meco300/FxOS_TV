@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+        <link href="css/material-wfont.min.css" rel="stylesheet">
+
+        <script src="js/jquery-1.11.2.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/ripples.min.js"></script>
+        <script src="js/material.min.js"></script>
+        <script src="js/program_detail.js" defer></script>
+        <script src="js/main.js" defer></script>
+        <style>
+            h1{
+                font-size: 20px;
+            }
+            article{
+                border-radius: 10px;
+                padding: 10px;
+                background-color: white;
+                margin-bottom: 10px;
+            }
+
+            .keywordListChild{
+                padding: 10px;
+                background-color: #ffebcd;
+                margin-bottom: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ヘッダ -->
+        <div class="navbar navbar-warning">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">番組情報</a>
+            </div>
+        </div>
+
+        <!-- 番組情報 -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title" id="program_title">番組名</h3>
+            </div>
+            <div class="panel-body" id="program_description">
+            </div>
+        </div>
+
+        <!-- キーワード -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">キーワード</h3>
+            </div>
+            <div class="panel-body" id="setting">
+                <div id="keywordList"></div>
+            </div>
+        </div>
+    </body>
+</html>

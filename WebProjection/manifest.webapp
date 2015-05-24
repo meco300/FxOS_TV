@@ -2,29 +2,35 @@
   "name": "hum TV",
   "description": "ハムスターチームのテレビアプリです",
   "version": "1",
-  "type": "privileged",
   "launch_path": "/index.html",
   "icons": {
-    "128": "/style/icons/icon.png",    
-    "160": "/style/icons/icon.png",
-    "320": "/style/icons/icon4k.png"
+    "128": "/images/icon128x128.png"
   },
+  "developer": {
+    "name": "Team9",
+    "url": "http://fabble.cc/mhidaka/kddihackathonteam9"
+  },
+  "type": "privileged",
   "permissions": {
-    "pana-plugin":{},
-    "pana-server-url":{},
-    "tv":{},
     "systemXHR": {
       "description": "xhr! xhr!"
     },
+    "pana-plugin":{},
+    "pana-server-url":{},
+    "tv":{},
     "tcp-socket" : {
       "description" : "Create TCP sockets and communicate over them."
     }
   },
-  "default_locale": "ja-JP",
+  "installs_allowed_from": [
+    "*"
+  ],
   "locales": {
-    "ja-JP": {
-      "name":"hum TV",
-      "description": "Sample TVAPI"
+    "ja": {
+      "name": "ハムクラウド",
+      "description": "ハムスターの飼育支援アプリです",
+      "permissions": {}
     }
-  }
+  },
+  "default_locale": "en"
 }

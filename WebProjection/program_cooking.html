@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+        <link href="css/material-wfont.min.css" rel="stylesheet">
+
+        <script src="js/jquery-1.11.2.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/ripples.min.js"></script>
+        <script src="js/material.min.js"></script>
+        <script src="js/program_cooking.js" defer></script>
+        <script src="js/main.js" defer></script>
+        <style>
+            h1{
+                font-size: 20px;
+            }
+            article{
+                border-radius: 10px;
+                padding: 10px;
+                background-color: white;
+                margin-bottom: 10px;
+            }
+
+            .keywordListChild{
+                padding: 10px;
+                background-color: #ffebcd;
+                margin-bottom: 2px;
+            }
+            .recipeTitle{
+                background-color: white;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ヘッダ -->
+        <div class="navbar navbar-warning">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">番組情報</a>
+            </div>
+        </div>
+
+        <!-- キーワードリスト -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">レシピ</h3>
+            </div>
+            <div class="panel-body" id="recipeWrapper">
+            </div>
+        </div>
+        <div class="panel panel-primary" id="sale_info_area">
+            <div class="panel-heading">
+                <h3 class="panel-title">特売情報: 肉のハナマサ</h3>
+            </div>
+            <div class="panel-body" id="sale_infoWrapper">
+            </div>
+        </div>
+    </body>
+</html>
