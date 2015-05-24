@@ -10,9 +10,14 @@ var mock = (function () {
             switch(key) {
 
                 case 65: /* A */
-                    // TODO initテスト
-                    console.log("Init");
-                    stb.init();
+
+                  //1
+                  document.getElementById("adiv").style.display="none"
+                  document.getElementById("bdiv").style.display="none"                                       
+                  document.getElementById("cyoutube").style.visibility = 'visible';
+                  document.getElementById("cyoutube").style.display=""                 
+                  document.getElementById("cdiv").style.display=""  
+
                     break;
                 case 66: /* B */
                     // TODO initテスト
@@ -28,19 +33,10 @@ var mock = (function () {
                 break; 
 
                case 69: /* E */
-                    //aのビデオを消す
-                    //document.getElementById("atv").style.visibility = 'hidden';
-                    document.getElementById("atv").style.display="none"
                 break; 
 
 
                case 70: /* F */
-                    //Aにテレビが消えて絵がでる
-                    document.getElementById("atv").style.display="none"
-                    document.getElementById("atv").style.visibility = 'hidden';
-                    document.getElementById("aimgfile").style.visibility = 'visible';
-                    document.getElementById("aimgfile").style.display=""
-                    
                 break; 
 
 
@@ -71,29 +67,14 @@ var mock = (function () {
                     document.getElementById("atv").style.visibility = 'visible';
                     document.getElementById("atv").style.display=""
                     stb.display('atv');
-                    
-                break;  
+                    break;  
 
-               case 74: /* J */
-                    //Aに絵がつく
-                    document.getElementById("atv").style.display="none"
-                    document.getElementById("atv").style.visibility = 'hidden';
-                    document.getElementById("ayoutube").style.display="none"
-                    document.getElementById("ayoutube").style.visibility = 'hidden';                    
-                    document.getElementById("aimgfile").style.visibility = 'visible';
-                    document.getElementById("aimgfile").style.display=""               
+               case 74: /* J */            
                 break;  
                     
                     
                     
                 case 75: /* K */
-                    //BにYoutubeがつく
-                    document.getElementById("btv").style.display="none"
-                    document.getElementById("btv").style.visibility = 'hidden';
-                    document.getElementById("bimgfile").style.display="none"
-                    document.getElementById("bimgfile").style.visibility = 'hidden';                    
-                    document.getElementById("byoutube").style.visibility = 'visible';
-                    document.getElementById("byoutube").style.display=""               
                 break;                     
                case 76: /* L */
                     //Bにビデオがつく
@@ -104,17 +85,9 @@ var mock = (function () {
                     document.getElementById("btv").style.visibility = 'visible';
                     document.getElementById("btv").style.display=""               
                     stb.display('btv');
-
                 break;  
 
-               case 77: /* M */
-                    //Bに絵がつく
-                    document.getElementById("btv").style.display="none"
-                    document.getElementById("btv").style.visibility = 'hidden';
-                    document.getElementById("byoutube").style.display="none"
-                    document.getElementById("byoutube").style.visibility = 'hidden';                    
-                    document.getElementById("bimgfile").style.visibility = 'visible';
-                    document.getElementById("bimgfile").style.display=""               
+               case 77: /* M */    
                 break;                     
                     
                     

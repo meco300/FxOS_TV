@@ -10,10 +10,49 @@
         //if(name === 'CHANNEL'){
         //  setChannel(message);
         //}
-      
+      if (name === 'a_info'){
+      }      
+      if (name === 'b_info'){
+      }  
+      if (name === 'a_movie'){
+
+
+
+
+      }      
+      if (name === 'b_movie'){
+
+
+      }         
+      if (name === 'a_picture'){
+      }      
+      if (name === 'b_picture'){
+      }      
+      if (name === '1'){
+  
+
+
+
+             
+      }        
+      if (name === '2'){
+      }        
+      if (name === '3'){
+      }       
+      if (name === '4'){
+      }                    
+      if (name === '5'){
+      }        
+      if (name === '6'){
+      }        
+      if (name === 'turnoff'){
+
+      }   
+
       if (name === 'A'){
-        calibration = 'adiv';
+        calibration = 'bdiv';
       }
+
       if (name === 'B'){
         calibration = 'bdiv';
       }

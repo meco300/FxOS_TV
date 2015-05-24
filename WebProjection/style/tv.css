@@ -74,3 +74,22 @@ body, html {
   overflow:hidden;
   visibility:hidden;
 }
+.cdiv-frame {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height:100%;
+  border: 10px solid black;
+  visibility:hidden;
+}
+.cyoutube-frame {
+  width: 100%;
+  height:100%;
+  top: 0;
+  left:0;
+  margin: 0;
+  padding:0;
+  border:none;
+  overflow:hidden;
+  visibility:hidden;
+}
